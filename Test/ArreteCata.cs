@@ -30,12 +30,9 @@ namespace Test
         [Index(9)]
         public string dat_maj { get; set; }
 
-        public void AfficheArreteCata()
+        public ArreteCata(string ligne)
         {
-            Console.WriteLine($"{cod_nat_catnat}\t{lib_commune}\t{dat_deb}");
-        }
-        public void DeclareArreteCata(List<string> Cata)
-        {
+            List<string> Cata = new List<string>(ligne.Split(';'));
 
             cod_nat_catnat = Cata[0];
 
@@ -56,6 +53,10 @@ namespace Test
             dat_pub_jo = Cata[8];
 
             dat_maj = Cata[9];
+        }
+        public void AfficheArreteCata()
+        {
+            Console.WriteLine($"{cod_nat_catnat}\t{lib_commune}\t{dat_deb}");
         }
     }
 }

@@ -19,15 +19,16 @@ namespace Test
             MySqlConnection connexion = new MySqlConnection("DataBase=cat_nat; Server=localhost; User Id=root; PassWord=root");
            
 
-            try
-            {
+            //try
+            //{
                 connexion.Open();
+                Tests.InitArreteCata(connexion);
                 Console.WriteLine("connexion établie");
-            }
-            catch
-            {
+            //}
+            //catch
+            //{
                 Console.WriteLine("connexion échouée");
-            }
+            //}
             Console.ReadKey();
         }
     }
