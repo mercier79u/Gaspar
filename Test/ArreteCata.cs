@@ -20,15 +20,15 @@ namespace Test
         [Index(4)]
         public string lib_risque_jo { get; set; }
         [Index(5)]
-        public string dat_deb { get; set; }
+        public DateTime dat_deb { get; set; }
         [Index(6)]
-        public string dat_fin { get; set; }
+        public DateTime dat_fin { get; set; }
         [Index(7)]
-        public string dat_pub_arrete { get; set; }
+        public DateTime dat_pub_arrete { get; set; }
         [Index(8)]
-        public string dat_pub_jo { get; set; }
+        public DateTime dat_pub_jo { get; set; }
         [Index(9)]
-        public string dat_maj { get; set; }
+        public DateTime? dat_maj { get; set; }
 
         public ArreteCata(string ligne)
         {
@@ -44,15 +44,22 @@ namespace Test
 
             lib_risque_jo = Cata[4];
 
-            dat_deb = Cata[5];
+            dat_deb = DateTime.Parse(Cata[5]);
 
-            dat_fin = Cata[6];
+            dat_fin = DateTime.Parse(Cata[6]);
 
-            dat_pub_arrete = Cata[7];
+            dat_pub_arrete = DateTime.Parse(Cata[7]);
 
-            dat_pub_jo = Cata[8];
+            dat_pub_jo = DateTime.Parse(Cata[8]);
 
-            dat_maj = Cata[9];
+            if (String.IsNullOrEmpty(Cata[9]))
+            {
+                dat_maj = null;
+            }
+            else
+            {
+                dat_maj = DateTime.Parse(Cata[9]);
+            }
         }
         public void AfficheArreteCata()
         {
