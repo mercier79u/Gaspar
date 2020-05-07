@@ -15,6 +15,8 @@ namespace Test
 {
     class Tests
     {
+        //Test CSVReader VS Lecture "normale" d'un fichier CSV
+
         //public static void LireCata1()
         //{
         //    // Création du chronomètre.
@@ -95,6 +97,7 @@ namespace Test
             }
 
             myRequest.Insert(0, "INSERT INTO inseepostal VALUES");
+            //Supprime la virugule finale inutile
             myRequest.Remove(myRequest.Length - 1, 1);
 
             Console.WriteLine(myRequest.ToString());
@@ -139,6 +142,7 @@ namespace Test
                     
             }
             myRequest.Insert(0, "INSERT INTO arretecata VALUES");
+            //Supprime la virugule finale inutile
             myRequest.Remove(myRequest.Length - 1, 1);
 
             Console.WriteLine(myRequest.ToString());
@@ -189,6 +193,7 @@ namespace Test
             }
             //Insertion de toutes les lignes d'un coup
             myRequestInsert.Insert(0, "INSERT INTO arretecata VALUES ");
+            //Supprime la virugule finale inutile
             myRequestInsert.Remove(myRequestInsert.Length - 1, 1);
 
             Console.WriteLine(myRequestInsert.ToString());
@@ -222,7 +227,9 @@ namespace Test
                     
                 }
             }
+            //Insertion de toutes les lignes d'un coup
             myRequest.Insert(0, "INSERT INTO libellerisque VALUES ");
+            //Supprime la virugule finale inutile
             myRequest.Remove(myRequest.Length - 1, 1);
             query = new MySqlCommand(myRequest.ToString(), connexion);
             query.ExecuteNonQuery();

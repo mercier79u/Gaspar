@@ -30,7 +30,7 @@ namespace Test
             //Tests.InitInseePostal(connexion);
 
 
-            //Télécharge un fichier depuis un lien, et l'enregistre avec un nom donné
+            //Exemple de téléchargement d'un fichier depuis un lien, et l'enregistre avec un nom donné
             //WebClient webClient = new WebClient();
             //webClient.DownloadFile("https://files.georisques.fr/GASPAR/CATNAT/catnat_mayotte.csv", @"C:\Users\Antoine\Desktop\toto.csv");
 
